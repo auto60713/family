@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>我家相簿</title>
+<link type = "text/css" rel = "stylesheet" href = "panel.css">
+<link rel="stylesheet" type="text/css" href="homepage/style.css" media="screen" />
+<script type="text/javascript" src="homepage/jquery.js"></script>
+<style type = "text/css">
+	.about{position:absolute;
+	top:250px; left:60px;
+	width:260px; height:260px;}
+</style>
+</head>
+
+<body>
+	<Embed Src="homepage/homemu.mp3" Loop="True" AutoStart="True" Hidden=True>
+	<div>
+		<header>
+			<h1 class = "home_title">My Family Album</h1>
+		</header>
+		<aside>
+		<!--分享相片區-->
+		</aside>
+	</div>
+	<br>
+	<br>
+	<TABLE border="5" width="100%" height="300" cellspacing="40">
+	<tr height="250px">
+	<TD width="200px">
+	<div>
+		<fieldset class = "about1">
+			<legend><b><h3>關於本站</h3></b></legend>
+			<center>
+				<marquee behavior="scroll" onmouseover=this.stop() onmouseout=this.start() 
+					width=220 height=220 direction="up" scrolldelay="200">
+					相片是家庭中保存記憶的重要媒介，尤其是現在手機、平板電腦照相功能普及的時代，更是隨時隨地都可進行拍照。
+					當照片大量產生時，如何保存、分類、搜尋、分享就成了一個很大的問題。
+				</marquee> 
+			</center>
+		</fieldset>
+	</div>
+	</TD>
+	
+	<TD width="200px"><div id="wowslider-container1">
+		<div class="ws_images" Align="left">
+			<ul>
+				<li><img src="A001/john/1.jpg" width="200" height="160"/></li>	
+				<li><img src="A001/john/2.jpg" width="200" height="160"/></li>
+				<li><img src="A001/john/3.jpg" width="200" height="160"/></li>
+				<li><img src="A001/john/4.jpg" width="200" height="160"/></li>
+				<li><img src="A001/john/5.jpg" width="200" height="160"></li>
+			</ul>
+		</div>
+		</div>
+	</TD>
+	<tr>
+	</TABLE>
+    <br>
+	<a href="login.html" align="right" size="7">skip</a>	
+	<script type="text/javascript" src="homepage/wowslider.js"></script>
+	<script type="text/javascript" src="homepage/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!--<? session_start(); ?>-->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>我家相簿</title>
+<link type = "text/css" rel = "stylesheet" href = "panel.css">
+<link type = "text/css" rel = "stylesheet" href = "form.css">
+</head>
+
+<body>
+	<div>
+		<header>
+			<nav>
+				<ul class = "menu">
+					<li><a href="myhome.php">我的首頁</a></li>
+					<li><a href="familytree.php">返回家庭樹</a></li>
+				</ul>
+			</nav>
+		</header>		
+	</div>
+	<p class="name">Hello!&nbsp&nbsp<? echo $memID; ?> </p>
+	<div>
+		<form class = "form2" action = "tree.php" method = "post" enctype = "multipart/form-data">
+			<table>
+				<tr>
+				<th>第一層</th>
+				<td><input type="text" name="level1"></td>
+				</tr>
+				<tr>
+				<th>第二層</th>
+				<td><input type="text" name="level2"></td>
+				</tr>
+				<tr>
+				<th>第三層</th>
+				<td><input type="text" name="level3"></td>
+				</tr>
+			</table>
+				<p><input type="submit" value="確定"></p>
+		</form>
+	</div>
+</body>
+</html>

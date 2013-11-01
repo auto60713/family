@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>我家相簿</title>
+<link type = "text/css" rel = "stylesheet" href = "panel.css">
+<link rel="stylesheet" type="text/css" href="homepage/style.css" media="screen" />
+
+<script type="text/javascript" src="homepage/jquery.js"></script>
+
+
+<script type="text/javascript" src="homepage/wowslider.js"></script>
+<script type="text/javascript" src="homepage/script.js"></script>
+
+</head>
+
+
+<style type = "text/css">
+
+
+	.about{
+	position:absolute;
+	top:250px; left:100px;
+	width:260px; height:260px;}
+
+	
+	div.ws_images{
+
+	border: 4px solid #fff;
+    box-shadow:4px 4px 3px rgba(20%,20%,40%,0.5);
+	background:#007AFA;
+	}
+	
+</style>
+
+
+<body>
+	<Embed Src="homepage/moon.mp3" Loop="True" AutoStart="True" Hidden=True>
+
+		<header>
+			<h1 class = "home_title">My Family Album</h1>
+		</header>
+
+
+	<TABLE border="0" width="95%" height="300px" cellspacing="50">
+	
+	<TD width="300px">
+	<div>
+		<fieldset class = "about1">
+			<legend><b><h3>關於本站</h3></b></legend>
+			<center>
+				<marquee behavior="scroll" onmouseover=this.stop() onmouseout=this.start() 
+					width=320 height=220 direction="up" scrolldelay="200">
+					<img src = "images/fam_tree.jpg" width = "100" height = "100">
+			    	<p>相片是家庭中保存記憶的重要媒介，</p>
+					<p>尤其是現在手機、平板電腦照相功能普及的時代，</p>
+					<p>更是隨時隨地都可進行拍照。</p>
+					<p>當照片大量產生時，如何保存、分類、搜尋、分享就成了一個很大的問題。</p>
+				    <p>專屬於家庭的網路相簿!!!</p>
+					<p>擁有會員的最新分享!!!</p>
+					<p>集合標記、美編、相簿與家庭樹為一體!!!</p>
+					<p>讓使用者不只是編輯相片，還能熟悉家庭的每位成員!!!</p>
+					
+				</marquee> 
+			</center>
+		</fieldset>
+	</div>
+	</TD>
+	<TD width="80px"><!--中間留白--></TD>
+	<TD width="350px" height="5%">
+	<div id="wowslider-container1">
+		<div class="ws_images" Align="left">
+			<ul>
+				<li><img src="A001/home/1.jpg" width="350" height="250"/></li>	
+				<li><img src="A001/home/2.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/3.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/4.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/5.jpg" width="350" height="250"></li>
+				<li><img src="A001/home/1.jpg" width="350" height="250"/></li>	
+				<li><img src="A001/home/2.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/3.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/4.jpg" width="350" height="250"/></li>
+				<li><img src="A001/home/5.jpg" width="350" height="250"></li>
+			</ul>
+		</div>
+	</div>
+	</TD>
+	
+	</TABLE>
+	<center><h1 style="font-size:50px;"><a href="login.html" align="right" >進入</a></h1></center>
+	
+</body>
+</html>
