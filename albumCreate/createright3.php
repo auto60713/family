@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,6 +29,8 @@ $username="root"; // Mysql username
 $password="123456"; // Mysql password 
 $db_name="myhome"; // Database name 
 $tbl_name1="album"; // Table name 
+
+$loginname=$_SESSION['ssusername'];
 
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");

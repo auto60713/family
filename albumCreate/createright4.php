@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -14,7 +15,7 @@
 	</ul>
 </div>
 
-<form action="albcreate.php?loginname=<?echo $loginname?>" method="post"  >
+<form action="albcreate.php" method="post"  >
 		<br>
       相簿名稱：<input type="text" name="albname">
 	  日期：<input type="date" value="<?php echo date('Y-m-d'); ?>" name="albdate"/>
@@ -29,13 +30,13 @@ $password="123456"; // Mysql password
 $db_name="myhome"; // Database name 
 $tbl_name1="album"; // Table name 
 
+$loginname = $_SESSION['ssusername'];
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 
 mysql_query("SET NAMES 'utf8'");
 
-$loginname = $_SESSION['username'];
-$loginname = ltrim($loginname);
+
 $query = "SELECT photoID, location FROM photo WHERE fm_ID='$loginname' and mk3='$mk3'";
 $result=mysql_query($query);
 
