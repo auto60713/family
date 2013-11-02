@@ -7,20 +7,27 @@
 <link type = "text/css" rel = "stylesheet" href = "panel.css">
 <link type="text/css" rel="stylesheet" href="tree.css">
 <style>
-html {background: url(images/fam_tree1) no-repeat center center fixed; 
+body {background: url(images/fam_tree1) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;}
+	
+	div.tree{
+	 position: absolute;
+ 
+   left:10%;
+	}
 </style>
 </head>
 
 <body>
  	<div id=menu>
+	<br>
 		<ul class=menu>
 		<li><a href="myhome.php" target="top"> 回上頁 </a></li>
 	</div>
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span> </p>
+	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
 	<div class="tree">
 	<ul>
 		<li>

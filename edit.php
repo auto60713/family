@@ -1,11 +1,14 @@
-﻿<!--<? session_start(); ?>-->
+﻿<? session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset = "UTF-8">
 <title>我家相簿</title>
 <link type = "text/css" rel = "stylesheet" href = "panel.css">
+<link rel="stylesheet" type="text/css" href="draw.css" />
 
+<script src="1111.js" type="text/javascript"></script>
+<script src="drawings.js" type="text/javascript"></script>	
 <style type = "text/css">
 	.fieldset1{position:absolute;
 				top:90px; 
@@ -20,21 +23,21 @@
 	<div>
 		<header>
 			<nav>
+			<br>
 				<ul class = "menu">
 					<li><a href="myhome.php">回上頁</a></li>
 					<li><a href="edit.php">塗鴉</a></li>
-					<li><a href="edit-2.php">相框</a></li>							
+					<li><a href="edit2.php">相框</a></li>							
 				</ul>
 			</nav>
 		</header>		
 	</div>
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span> </p>
+	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
 	
 	<fieldset class="fieldset1">
 		<legend><b><h3></h3></b></legend>
-		<link rel="stylesheet" type="text/css" href="121.css" />
-		<script src="1111.js" type="text/javascript"></script>
-		<script src="drawings.js" type="text/javascript"></script>	
+		
+	
 		<?
 			$albID="A001";
 			$memID=$loginname;

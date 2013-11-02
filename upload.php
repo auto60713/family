@@ -1,4 +1,4 @@
-﻿<!--<? session_start(); ?>-->
+﻿<? session_start(); ?>
 
 <!DOCTYPE html>
 <html>
@@ -15,33 +15,17 @@
 			<h1 class = "home_title">My Family Album</h1>
 			<nav>
 				<ul class = "menu">
-					<li><a href="upload.php">上傳</a></li>
-					<li><a href="edit.php">美編</a></li>
-					<li><a href="mark/markframe.php?loginname= <? echo $loginname;?>">註記</a></li>			
-					<li><a href="#">相簿</a>
-						<ul>
-							<li><a href="AlbumCreate/albcframe.php?loginname= <? echo $loginname;?>">建立</a></li>
-			
-							
-							<li><a href="albumpre/albframe.php?loginname= <? echo $loginname;?>">分享預覽</a></li>
-							<li><a href="AlbumList/albset.php?loginname= <? echo $loginname;?>">分享設定</a></li>
-							<li><a href="AlbumList/albframe.php?loginname= <? echo $loginname;?>">瀏覽</a></li>
-							
-						</ul>
-					</li>
-					<li><a href="familytree.php ?loginname= <? echo $loginname;?>">家庭樹</a></li>
-					<li><a href="join-1.php?loginname= <? echo $loginname;?>"> 資料編輯 </a></li>
-				
-					<li><a href="logout.php">登出</a></li>
+					<li><a href="myhome.php">回上頁</a></li>
+					
 				</ul>
 			</nav>
 		</header>		
 	</div>
 	
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span>
+	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span>
 	<div>
 	<br>
-		<form class = "form2" enctype = "multipart/form-data" method = "post" action = "myupload.php?loginname=<? echo $loginname?>">
+		<form class = "form2" enctype = "multipart/form-data" method = "post" action = "myupload.php">
 		<table>
 			<tr>
 			<th>1</th>

@@ -8,6 +8,7 @@
 <body>
  <body>
 <div id=menu>
+<br>
 	<ul class = "menu">
 	<li><a href="../myhome.php" target="top"> 回上頁 </a></li>
 	</ul>
@@ -33,7 +34,7 @@ mysql_select_db("$db_name")or die("cannot select DB");
 
 mysql_query("SET NAMES 'utf8'");
 
-//$loginname="william";
+$loginname = $_SESSION['username'];
 $loginname = ltrim($loginname);
 $query = "SELECT photoID, location FROM photo WHERE fm_ID='$loginname' and mk3='$mk3'";
 $result=mysql_query($query);

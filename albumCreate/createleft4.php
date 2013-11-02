@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -8,25 +9,28 @@
 <? 
 //取得傳遞過來的資料
 $host="localhost"; // Host name 
-$username="root"; // Mysql username 
+$sqlusername="root"; // Mysql username 
 $password="123456"; // Mysql password 
 $db_name="myhome"; // Database name 
 $tbl_name1="album"; // Table name 
 
-mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+$loginname = $_SESSION['ssusername'];
+mysql_connect("$host", "$sqlusername", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 mysql_query("SET NAMES 'utf8'");
 //$loginname="william";
 
 $query = "SELECT DISTINCT mk3 FROM photo WHERE fm_ID='".ltrim($loginname)."' and mk3 is not null order by mk3";
 $result=mysql_query($query);
-
+echo "<br>";
 print($loginname);
 ?>
 <br>
-<input type=button value="日期" onClick="location.href='createleft.php?loginname=<?echo $loginname?>'">
-<input type=button value="主題" onClick="location.href='createleft2.php?loginname=<?echo $loginname?>'">
-<input type=button value="節慶" onClick="location.href='createleft3.php?loginname=<?echo $loginname?>'">
+
+<input type=button value="日期" onClick="location.href='createleft.php?loginname=<?echo $_SESSION['username'];?>'">
+<input type=button value="主題" onClick="location.href='createleft2.php?loginname=<?echo $_SESSION['username'];?>'">
+<input type=button value="節慶" onClick="location.href='createleft3.php?loginname=<?echo $_SESSION['username'];?>'">
+<br><br>
 <TR><TH>地點</TH></TR>
 <?
 while ($row=mysql_fetch_row($result)) {

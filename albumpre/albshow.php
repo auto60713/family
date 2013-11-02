@@ -16,6 +16,7 @@ function showimage() {
 
 <body>
   	<div id=menu>
+	<br>
 		<ul class=menu>
 		<li><a href="../myhome.php" target="top">回上頁 </a></li>
 	</div>

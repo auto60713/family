@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -28,26 +29,27 @@
   <body >
   <body>
   	<div id=menu>
+	<br>
 		<ul class=menu>
 		<li><a href="../myhome.php" target="top"> 回上頁 </a></li>
 	</div>
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span> </p>
+	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
     <br>
 
   
   <br><H3><center>設定分享相簿</center></H3>
-  <form action="albshareset.php ? loginname=<? echo $loginname;?>" method="post"  
+  <form action="albshareset.php ? loginname=<? echo $_SESSION['ssusername'];?>" method="post"  
   <?
 	$host="localhost"; // Host name 
-	$username="root"; // Mysql username 
+	$sqlusername="root"; // Mysql username 
 	$password="123456"; // Mysql password 
 	$db_name="myhome"; // Database name 
 	$tbl_name1="album"; // Table name 
 	
-	$con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+	$con=mysql_connect("$host", "$sqlusername", "$password")or die("cannot connect"); 
 	mysql_select_db("$db_name")or die("cannot select DB");
 	mysql_query("SET NAMES 'utf8'");
-	$memID = ltrim($loginname);
+	$memID = $_SESSION['ssusername'];
 	$result = mysql_query("SELECT albID,albumName,share FROM $tbl_name1 where memID='$memID'");
 	
 	print("<TABLE border=1 cellpadding=5 cellspacing=0 class=whitelinks align=\"center\">\n");   

@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -13,6 +14,8 @@ $password="123456"; // Mysql password
 $db_name="myhome"; // Database name 
 $tbl_name1="album"; // Table name 
 
+$loginname=$_SESSION['ssusername'];
+
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 mysql_query("SET NAMES 'utf8'");
@@ -20,13 +23,14 @@ mysql_query("SET NAMES 'utf8'");
 
 $query = "SELECT DISTINCT mk1 FROM photo WHERE fm_ID='".ltrim($loginname)."' and mk1 is not null order by mk1";
 $result=mysql_query($query);
-
+echo "<br>";
 print($loginname);
 ?>
 <br>
-<input type=button value="日期" onClick="location.href='createleft.php?loginname=<?echo $loginname?>'">
-<input type=button value="節慶" onClick="location.href='createleft3.php?loginname=<?echo $loginname?>'">
-<input type=button value="地點" onClick="location.href='createleft4.php?loginname=<?echo $loginname?>'">
+<input type=button value="日期" onClick="location.href='createleft.php'">
+<input type=button value="節慶" onClick="location.href='createleft3.php'">
+<input type=button value="地點" onClick="location.href='createleft4.php'">
+<br><br>
 <TR><TH>主題</TH></TR>
 <?
 while ($row=mysql_fetch_row($result)) {

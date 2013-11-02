@@ -25,16 +25,16 @@
   <body onload="">
   <img width="100" height="100" src="../images/navp1.jpg">
   
-  <br>選擇相簿
+  <br>相簿清單
   
   <?
 	$host="localhost"; // Host name 
-	$username="root"; // Mysql username 
+	$sqlusername="root"; // Mysql username 
 	$password="123456"; // Mysql password 
 	$db_name="myhome"; // Database name 
 	$tbl_name1="album"; // Table name 
 	
-	$con=mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
+	$con=mysql_connect("$host", "$sqlusername", "$password")or die("cannot connect"); 
 	mysql_select_db("$db_name")or die("cannot select DB");
 	mysql_query("SET NAMES 'utf8'");
 

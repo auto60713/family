@@ -8,7 +8,7 @@
 	
 </head>
 <FRAMESET cols="12%,*" frameborder="3" border="1">
- <FRAME NAME="left" SRC="createleft.php?loginname=<? echo $loginname;?>">
+ <FRAME NAME="left" SRC="createleft.php?loginname=<? echo $_SESSION['name'];?>">
  <FRAME NAME="main" SRC="albc-main.html">
 </FRAMESET><noframes></noframes>
 </HTML>

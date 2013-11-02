@@ -7,12 +7,13 @@
 </head>
 <body>
   	<div id=menu>
+	<br>
 		<ul class=menu>
 		<li><a href="../myhome.php" target="top"> 回上頁 </a></li>
 
 		</li>
 	</div>
-   <form action="markset.php ? loginname=<? echo $loginname;?>" method="post"  
+   <form action="markset.php" method="post"  
      <div  class=Layout15_2 ><!--主欄(上)-->      
              <h3>主題 
 			   <select size="1"name="topic" onchange=>

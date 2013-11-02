@@ -1,5 +1,5 @@
-<?ob_start();
- session_start(); ?>
+<?ob_start(); 
+session_start(); ?>
  <html>
  <head>
  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -52,11 +52,11 @@
 	}
 
 	mysql_select_db("myhome", $con);
-	$query="select * from member where memID = '$memID' and password='$userpassword'";  
+	$sql="select * from member where memID = '$memID' and password='$userpassword'";  
 	//echo $query;
-	$ret = mysql_query($query);
-	$rows =mysql_num_rows($ret); 
-   if($rows=="")
+	$result = mysql_query($sql);
+    $row = @mysql_fetch_row($result); 
+   if($row=="")
    {
 		?>  
 		<script language="JavaScript">
@@ -67,14 +67,11 @@
    }    
    else
    {
-		$list=mysqli_fetch_array($sql);   	 
-		$_SESSION["loginname"]=$list['memID'];   
-		$_SESSION['username']=$list['name'];	
+		  	 
+		$_SESSION["ssuserid"]=$row[0];   
+		$_SESSION["ssusername"]=$row[2];	
 		
-		if($_POST['password1']=="123123")
-		  header("Location:./mylist9.php");
-		else
-		  header("Location:./myhome.php?loginname=$loginname;");
+	    header("Location:./myhome.php");
     } 
 	 
 	mysql_close($con);

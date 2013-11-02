@@ -1,3 +1,4 @@
+<? session_start(); ?>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -11,10 +12,11 @@ $password="123456"; // Mysql password
 $db_name="myhome"; // Database name 
 $tbl_name1="album"; // Table name 
 
-
+$loginname = $_SESSION['ssusername'];
 mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
 mysql_select_db("$db_name")or die("cannot select DB");
 mysql_query("SET NAMES 'utf8'");
+
 
 if (!$_POST["chk"]) {
 ?>

@@ -1,4 +1,4 @@
-﻿<!--<? session_start(); ?>-->
+﻿<? session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,25 +16,25 @@
 <body>
 	<div>
 		<header>
+		    <br>
 			<h1 class = "home_title">My Family Album</h1>
+			<br>
 			<nav>
 				<ul class = "menu">
 					<li><a href="upload.php">上傳</a></li>
 					<li><a href="edit.php">美編</a></li>
-					<li><a href="mark/markframe.php?loginname= <? echo $loginname;?>">註記</a></li>			
+					<li><a href="mark/markframe.php">註記</a></li>			
 					<li><a href="#">相簿</a>
 						<ul>
-							<li><a href="AlbumCreate/albcframe.php?loginname= <? echo $loginname;?>">建立</a></li>
-			
-							
-							<li><a href="albumpre/albframe.php?loginname= <? echo $loginname;?>">分享預覽</a></li>
-							<li><a href="AlbumList/albset.php?loginname= <? echo $loginname;?>">分享設定</a></li>
-							<li><a href="AlbumList/albframe.php?loginname= <? echo $loginname;?>">瀏覽</a></li>
+							<li><a href="AlbumCreate/albcframe.php">建立</a></li>
+							<li><a href="AlbumList/albframe.php">全部相簿</a></li>
+							<li><a href="AlbumList/albset.php">分享設定</a></li>
+							<li><a href="albumpre/albframe.php">分享預覽</a></li>
 							
 						</ul>
 					</li>
-					<li><a href="familytree.php ?loginname= <? echo $loginname;?>">家庭樹</a></li>
-					<li><a href="join-1.php?loginname= <? echo $loginname;?>"> 資料編輯 </a></li>
+					<li><a href="familytree.php">家庭樹</a></li>
+					<li><a href="join-1.php"> 資料編輯 </a></li>
 				
 					<li><a href="logout.php">登出</a></li>
 				</ul>
@@ -45,7 +45,7 @@
 	
 	<!--<div style="top:420px;left:560px;position:absolute;"><img src="images/pic01.jpg" height="240" width="550" ></div>  -->
    
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span> </p>
+	<p class="name"><br><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
 	
 	<div class="BOX">
 		<img src = "images/pic6.jpg" height="150" width="150" style="top:480px;left:390px; position:absolute;" />

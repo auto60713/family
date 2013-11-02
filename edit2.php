@@ -307,6 +307,7 @@ function getImgSize(imgSrc)
 	<div>
 		<header>
 			<nav>
+			<br>
 				<ul class = "menu">
 					<li><a href="myhome.php">回上頁</a></li>
 					<li><a href="edit.php">塗鴉</a></li>
@@ -315,7 +316,7 @@ function getImgSize(imgSrc)
 			</nav>
 		</header>		
 	</div>
-	<p class="name"><span style="float: right">您好!  <? echo $loginname;?></span> </p>
+	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
 	
 	<fieldset class="fieldset2">
 		<legend><b><h3></h3></b></legend>
