@@ -10,38 +10,8 @@
 </head>
 <style type = "text/css">
 
-img.cloud {
-float:left;
-
- position: absolute;
- left:5%;
- z-index:-2;
-  opacity: 0.5;
-}
-
-img.tree {
-float:left;
-
- position: absolute;
- left:50%;
- opacity: 0.8;
-}
-
-img.tree:hover {
-
- opacity: 1;
-}
-
-h1 {
- position: absolute;
- top:40%;
- left:10%;
- 
- font-size:50px;
-   color:#007AFA;
-   text-shadow: 1px 2px 2px #7B7B7B;
-}
 	
+
 </style>
 <body>
 	<div>
@@ -63,7 +33,7 @@ h1 {
 							
 						</ul>
 					</li>
-					
+					<li><a href="familytree.php">家庭樹</a></li>
 					<li><a href="join-1.php"> 資料編輯 </a></li>
 				
 					<li><a href="logout.php">登出</a></li>
@@ -76,8 +46,27 @@ h1 {
 	<!--<div style="top:420px;left:560px;position:absolute;"><img src="images/pic01.jpg" height="240" width="550" ></div>  -->
    
 	<p class="name"><br><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
-	<a href="familytree.php"><h1>快來組織你的家庭樹！→</h1>
-	<img src="images/clouds.png" height="80%" width="60%" class="cloud">
-	<img src="images/tree12.png" height="80%" width="40%" class="tree"></a>
+	
+	<div class="BOX">
+		<img src = "images/pic6.jpg" height="150" width="150" style="top:480px;left:390px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic2.jpg" height="230" width="230" style="top:230px;left:560px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic3.jpg" height="200" width="200" style="top:450px;left:820px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic4.jpg" height="200" width="200" style="top:200px;left:900px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic5.jpg" height="150" width="150" style="top:430px;left:1080px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic7.jpg" height="150" width="150" style="top:180px;left:1150px; position:absolute;" />
+	</div>
+	<div class="BOX">
+		<img src = "images/pic8.jpg" height="150" width="150" style="top:450px;left:1250px; position:absolute;" />
+	</div>
 </body>
 </html>

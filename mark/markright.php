@@ -9,7 +9,7 @@
   	<div id=menu>
 	<br>
 		<ul class=menu>
-		<li><a href="../myhome.php" target="top"> 回上頁 </a></li>
+		<li><a href="../myhome.php"> 回上頁 </a></li>
 
 		</li>
 	</div>
