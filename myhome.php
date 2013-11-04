@@ -76,7 +76,7 @@ h1 {
 	<!--<div style="top:420px;left:560px;position:absolute;"><img src="images/pic01.jpg" height="240" width="550" ></div>  -->
    
 	<p class="name"><br><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
-	<a href="familytree.php"><h1>快來組織你的家庭樹！→</h1>
+	<a href="familytreelog.php"><h1>快來組織你的家庭樹！→</h1>
 	<img src="images/clouds.png" height="80%" width="60%" class="cloud">
 	<img src="images/tree12.png" height="80%" width="40%" class="tree"></a>
 </body>
