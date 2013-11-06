@@ -18,6 +18,11 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
  
    left:10%;
 	}
+	
+	h1{
+	text-shadow: 1px 2px 2px #7B7B7B;
+
+	}
 </style>
 </head>
 
@@ -32,7 +37,7 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 	
 	<div class="tree">
 	<?php 
-	echo '<h1>'.$_SESSION['treename'].'　的家庭樹</h1>';
+	echo '<h1><a style="color:blue; font-size:40px">'.$_SESSION['treename'].'</a>　的家庭樹</h1>';
 	echo '<ul><li>';
 			echo '<img src="./A001/mary/1.jpg" height=120 width=120">';
 			echo '<img src="./A001/william/2.jpg" height=120 width=120">';

@@ -22,9 +22,30 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 img {
 opacity: 0.6;
 }
+
+h1{ 
+text-shadow: 1px 2px 2px #7B7B7B;
+}
 </style>
 </head>
+<?
+//取得傳遞過來的資料
+$host="localhost"; // Host name 
+$sqlusername="root"; // Mysql username 
+$password="123456"; // Mysql password 
+$db_name="myhome"; // Database name 
+$tbl_name1="tree"; // Table name 
+$name = $_SESSION['ssusername'];
 
+mysql_connect("$host", "$sqlusername", "$password")or die("cannot connect"); 
+mysql_select_db("$db_name")or die("cannot select DB");
+mysql_query("SET NAMES 'utf8'");
+
+$sql = "SELECT * FROM tree where name = $name";
+$result = mysql_query($sql);
+$row = mysql_fetch_row($result)
+
+?>
 <body>
  	<div id=menu>
 	<br>
@@ -36,7 +57,7 @@ opacity: 0.6;
 	
 	<div class="tree">
 	<?php 
-	echo '<h1>'.$_SESSION["treename"].'　的家庭樹</h1>';
+	echo '<h1><a style="color:blue; font-size:40px">'.$_SESSION["treename"].'</a>　家庭樹</h1>';
 	echo '<ul><li>';
 			echo '<img src="images/nobody.jpg" height=120 width=120">';
 			echo '<img src="images/nobody.jpg" height=120 width=120"><br>';
