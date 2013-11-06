@@ -1,16 +1,35 @@
-﻿<? session_start(); ?>
+<? session_start(); ?>
 
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
-<meta charset = "UTF-8">
-<title>我家相簿</title>
+<meta charset="UTF-8">
 <link type = "text/css" rel = "stylesheet" href = "panel.css">
 <link type = "text/css" rel = "stylesheet" href = "form.css">
 </head>
 
+<style type = "text/css">
+form {
+position: absolute;
+ top:20%;
+ left:20%;
+ 
+  height:40%;
+   width:50%;
+   
+   padding:10px; 
+   
+  background:#CDFFCE;
+   border: 2px double #178918;
+    box-shadow: 3px 4px 4px #7B7B7B;
+
+}
+	
+</style>
+
+
 <body>
-	<div>
+<di<div>
 		<header>
 			<h1 class = "home_title">My Family Album</h1>
 			<nav>
@@ -23,45 +42,18 @@
 	</div>
 	
 	<p class="name"><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span>
-	<div>
-	<br>
-		<form class = "form2" enctype = "multipart/form-data" method = "post" action = "myupload.php">
-		<table>
-			<tr>
-			<th>1</th>
-			<td><input type = "file" name = "pic1"></td>
-			<th>2</th>
-			<td><input type = "file" name = "pic2"></td>
-			</tr>
-			<tr>
-			<th>3</th>
-			<td><input type = "file" name = "pic3"></td>
-			<th>4</th>
-			<td><input type = "file" name = "pic4"></td>
-			</tr>
-			<tr>
-			<th>5</th>
-			<td><input type = "file" name = "pic5"></td>
-			<th>6</th>
-			<td><input type = "file" name = "pic6"></td>
-			</tr>
-			<tr>
-			<th>7</th>
-			<td><input type = "file" name = "pic7"></td>
-			<th>8</th>
-			<td><input type = "file" name = "pic8"></td>
-			</tr>
-			<tr>
-			<th>9</th>
-			<td><input type = "file" name = "pic9"></td>
-			<th>10</th>
-			<td><input type = "file" name = "pic10"></td>
-			</tr>
-		</table>
-		<p>
-		<input type = "submit" value = "送出" id = "submit">
-		</p>
-		</form>
-	<div>
+	
+	
+<form action="upload_finish.php" method="post" enctype="multipart/form-data">
+<h2>請上傳個人照片</h2>
+<h3>**** jpg圖片大小：600x500  可多張上傳****</h3>
+ <input type="file" name="imageURL[]" id="imageURL" multiple />
+<br><br><br><br>
+
+<input type="submit" value="上傳" name="submit" />
+</form>
+
+
+
 </body>
 </html>
