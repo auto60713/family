@@ -50,13 +50,14 @@ $row = @mysql_fetch_row($result);
 
 	if($row[1] != null)
     {
+	    $_SESSION['treename'] = $row[1];
 	    if($name != "william")
         {
-          echo '<meta http-equiv=REFRESH CONTENT=0;url=familytree.php>';
+          echo '<meta http-equiv=REFRESH CONTENT=0;url=familytree2.php>';
         }
         else
         {
-	      echo '<meta http-equiv=REFRESH CONTENT=0;url=familytree2.php>';
+	      echo '<meta http-equiv=REFRESH CONTENT=0;url=familytree.php>';
         }
     }
     else

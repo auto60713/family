@@ -36,7 +36,7 @@ opacity: 0.6;
 	
 	<div class="tree">
 	<?php 
-	echo '<h1>'.$_SESSION["ssusername"].'　的家庭樹</h1>';
+	echo '<h1>'.$_SESSION["treename"].'　的家庭樹</h1>';
 	echo '<ul><li>';
 			echo '<img src="images/nobody.jpg" height=120 width=120">';
 			echo '<img src="images/nobody.jpg" height=120 width=120"><br>';

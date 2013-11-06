@@ -13,15 +13,32 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 	-o-background-size: cover;
 	background-size: cover;}
 	
-	div.tree{
-	 position: absolute;
- 
-   left:10%;
-	}
+
 	
 img {
 opacity: 0.6;
 }
+
+div.creat {
+ height:40%;
+   width:50%;
+   position: absolute;
+   top:20%;
+   left:20%;
+  
+ padding:10px; 
+      background:#CDFFCE;
+   border: 2px double #178918;
+    box-shadow: 3px 4px 4px #7B7B7B;
+}
+
+form{
+ margin:40px; 
+}
+
+h1{ text-shadow: 1px 2px 1px #7B7B7B;}
+
+h3{ text-shadow: 1px 2px 1px #7B7B7B;}
 </style>
 </head>
 
@@ -33,7 +50,15 @@ opacity: 0.6;
 	</div>
 	<p class="name"><br><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
 	
-	<h1>你還沒有建立家庭樹</h1>
+	<div class="creat">
+	<h1>你還沒有建立家庭樹，趕快來建立一顆吧!~</h1><br>
+	<form name="form" method="post" action="tree_finish.php">
+    <h3>樹的名稱：<input type="text" name="title"/><h3><br>
+    <h3>幾個子女：<input type="text" name="many"/> <h3><br>
+    <input type="submit" name="button" value="確定" style="height:30px; width:50px;"/>
+    </form>
+	</div>
+	
 	
 </body>
 </html>

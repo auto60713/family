@@ -32,7 +32,7 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 	
 	<div class="tree">
 	<?php 
-	echo '<h1>'.$_SESSION["ssusername"].'　的家庭樹</h1>';
+	echo '<h1>'.$_SESSION['treename'].'　的家庭樹</h1>';
 	echo '<ul><li>';
 			echo '<img src="./A001/mary/1.jpg" height=120 width=120">';
 			echo '<img src="./A001/william/2.jpg" height=120 width=120">';
@@ -42,8 +42,8 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 			echo '<a href="./A001/andson/br.html">Andson</a>';
 				echo '<ul>';
 			        echo '<li>';
-					echo '<img src="./A001/james/7.jpg" height=120 width=120"><br>';
-				    echo '<a href="./A001/james/br.html">'.$_SESSION["ssusername"].'</a>	';
+					echo '<img src="./A001/'.$_SESSION['ssusername'].'/face.jpg" height=120 width=120"><br>';
+				    echo '<a href="./A001/'.$_SESSION['ssusername'].'/br.html">'.$_SESSION["ssusername"].'</a>	';
 						echo '<ul>';
 							echo '<li>';
 	                            echo '<img src="./A001/john/3.png" height=120 width=120">';
