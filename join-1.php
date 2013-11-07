@@ -57,18 +57,7 @@
 		<fieldset class=a4>
 			<legend><b><h3>成員資料...</h3></b></legend>
 			<center>
-				<label for="name">稱謂:</label><input name="appellation" type="text" size="10" value ="<? echo $appellation; ?>">
-			
-				<? if ($adm > 0) {
-					echo '<label for="name">&nbsp;&nbsp;階層:</label><input name="level" type="text" size="5" value ="'.$level.'" >';
-					echo '<label for="name">&nbsp;&nbsp;次序:</label><input name="no" type="text" size="5" value ="'.$no.'">';
-					echo '<label for="name">&nbsp;&nbsp;管理者:</label><input name="adm" type="checkbox" checked>';
-				  } else {
-					echo '<label for="name">&nbsp;&nbsp;階層:</label><input name="level" type="text" size="5" value ="'.$level.'" STYLE="background-color: Cornsilk;" readonly>';
-				  	echo '<label for="name">&nbsp;&nbsp;次序:</label><input name="no" type="text" size="5" value ="'.$no.'" STYLE="background-color: Cornsilk;" readonly>';
-					echo '<label for="name">&nbsp;&nbsp;管理者:</label><input name="adm" type="checkbox">';
-				  }
-				?>
+				
 				<p><label for="name">姓名:</label><input name="name" type="text" value ="<? echo $name; ?>">
 					<label for="name">暱稱:</label><input name="nickname" type="text" value ="<? echo $nickname; ?>">
 				</p>

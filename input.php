@@ -13,7 +13,7 @@ session_start(); ?>
   {   ?>
   <script>
     window.alert('請至表單網頁輸入帳號');
- location.href='./login.php';
+ location.href='./home.html';
   </script><?
   }
   if(!isset($_POST['password1']))

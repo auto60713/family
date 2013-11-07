@@ -19,33 +19,13 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
    left:10%;
 	}
 	
-img {
-opacity: 0.6;
-}
+	h1{
+	text-shadow: 1px 2px 2px #7B7B7B;
 
-h1{ 
-text-shadow: 1px 2px 2px #7B7B7B;
-}
+	}
 </style>
 </head>
-<?
-//取得傳遞過來的資料
-$host="localhost"; // Host name 
-$sqlusername="root"; // Mysql username 
-$password="123456"; // Mysql password 
-$db_name="myhome"; // Database name 
-$tbl_name1="tree"; // Table name 
-$name = $_SESSION['ssusername'];
 
-mysql_connect("$host", "$sqlusername", "$password")or die("cannot connect"); 
-mysql_select_db("$db_name")or die("cannot select DB");
-mysql_query("SET NAMES 'utf8'");
-
-$sql = "SELECT * FROM tree where name = $name";
-$result = mysql_query($sql);
-$row = mysql_fetch_row($result)
-
-?>
 <body>
  	<div id=menu>
 	<br>
@@ -57,42 +37,69 @@ $row = mysql_fetch_row($result)
 	
 	<div class="tree">
 	<?php 
-	echo '<h1><a style="color:blue; font-size:40px">'.$_SESSION["treename"].'</a>　家庭樹</h1>';
-	echo '<ul><li>';
-			echo '<img src="images/nobody.jpg" height=120 width=120">';
-			echo '<img src="images/nobody.jpg" height=120 width=120"><br>';
-			echo '<a href="#">子女</a><a>　　</a>';
-			echo '<a href="#">子女</a>';
-				echo '<ul>';
-			        echo '<li>';
-					echo '<img src="A001/'.$_SESSION['ssusername'].'/face.jpg" height=120 width=120" style="opacity: 1;"><br>';
-				    echo '<a href="#">'.$_SESSION['ssusername'].'</a>	';
-						echo '<ul>';
-							echo '<li>';
-	                            echo '<img src="images/nobody.jpg" height=120 width=120">';
-		                       	echo '<img src="images/nobody.jpg" height=120 width=120"><br>';
-		                      	echo '<a href="#">祖父</a><a>　　</a>';
-		                     	echo '<a href="#">祖母</a>';
-	
-		                    echo '</li>';
-						echo '</ul>';
-					echo '</li>';
-					echo '<li>';
-				    echo '<img src="images/nobody.jpg" height=120 width=120"><br>';		
-				    echo '<a href="#">妻子</a>';
-						echo '<ul>';
-							echo '<li>';
-		                    	echo '<img src="images/nobody.jpg" height=120 width=120">';
-		                     	echo '<img src="images/nobody.jpg" height=120 width=120"><br>';
-		                     	echo '<a href="#">外祖父</a><a>　　</a>';
-		                    	echo '<a href="#">外祖母</a>';
-	                    	echo '</li>';
-			            echo '</ul>';
-					echo '</li>';
-			    echo '</ul>';
-		echo '</li>';
-	echo '</ul>';
+	echo '<h1><a style="color:blue; font-size:40px">'.$_SESSION['treename'].'</a>　的家庭樹</h1>';
 	?>
+	<ul>
+		<li>
+			<img src="./A001/john/3.png" height=120 width=120">
+			<img src="./A001/ada/4.png" height=120 width=120"><br>
+			<a href="./A001/john/br.html">John</a><a style="visibility:hidden;">　</a>
+			<a href="./A001/ada/br.html">Ada</a>
+			<ul>
+				<li>
+					<img src="./A001/1.jpg" height=120 width=120">
+					<img src="./A001/2.jpg" height=120 width=120">
+					<img src="./A001/james/7.jpg" height=120 width=120">
+					<br>
+					<a href="./A001/james/br.html">James</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/jenny/br.html">Jenny</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/<? echo $_SESSION['ssusername'];?>/br.html"><? echo $_SESSION['ssusername'];?></a>				
+					<ul>					
+						<li>
+							<img src="./A001/mary/1.jpg" height=120 width=120"><br>
+							<a href="./A001/mary/br.html">Mary</a>
+						</li>
+						<li>
+							<img src="./A001/william/2.jpg" height=120 width=120"><br>
+							<a href="./A001/william/br.html">Tony</a>
+						</li>
+						<li>
+							<img src="./A001/andson/7.jpg" height=120 width=120"><br>
+							<a href="./A001/andson/br.html">Andson</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+		<li>
+			<img src="./A001/6.png" height=120 width=120">
+			<img src="./A001/5.png" height=120 width=120"><br>
+			<a href="#">Standly</a><a style="visibility:hidden;">　</a>
+			<a href="#">ColaLin</a>
+			<ul>
+				<li>
+					<img src="./A001/52.jpg" height=120 width=120">
+                    <img src="./A001/5.jpg" height=120 width=120">
+					<img src="./A001/6.jpg" height=120 width=120">
+					<br>					
+					<a href="./A001/jenny/br.html">Alice</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/james/br.html">Oliver</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/jenny/br.html">Peter</a>
+					<ul>					
+						<li>
+							<img src="./A001/4.jpg" height=120 width=120"><br>
+							<a href="./A001/mary/br.html">Toyz</a>
+						</li>
+						<li>
+							<img src="./A001/3.jpg" height=120 width=120"><br>
+							<a href="./A001/william/br.html">Lilballs</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	
 	</div>
 	
 </body>

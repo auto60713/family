@@ -17,7 +17,19 @@ float:left;
  left:5%;
  z-index:-2;
   opacity: 0.5;
+  
+  
+  -webkit-animation: 6600ms pulsate infinite alternate ease-in-out;
+  animation: 6600ms pulsate infinite alternate ease-in-out;
 }
+
+@-webkit-keyframes pulsate {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.1); }
+  100% { -webkit-transform: scale(1); }
+}
+
+
 
 img.tree {
 float:left;
@@ -25,22 +37,31 @@ float:left;
  position: absolute;
  left:50%;
  opacity: 0.8;
+ 
+  -webkit-transform: all 0.5s ease;
+	transition: all 0.5s ease;
 }
 
 img.tree:hover {
-
+-webkit-transform: scale(1.1);
  opacity: 1;
 }
 
 h1 {
  position: absolute;
- top:40%;
+ top:50%;
  left:10%;
  
- font-size:50px;
+ font-size:40px;
    color:#007AFA;
-   text-shadow: 1px 2px 2px #7B7B7B;
+   text-shadow: 3px 2px 4px #7B7B7B;
 }
+	
+	
+	
+	
+	
+	
 	
 </style>
 <body>
@@ -76,7 +97,7 @@ h1 {
 	<!--<div style="top:420px;left:560px;position:absolute;"><img src="images/pic01.jpg" height="240" width="550" ></div>  -->
    
 	<p class="name"><br><span style="float: right">您好!  <? echo $_SESSION['ssusername'];?></span> </p>
-	<a href="familytreelog.php"><h1>快來組織你的家庭樹！→</h1>
+	<a href="familytreelog.php"><h1>快來使用家庭樹功能！→</h1>
 	<img src="images/clouds.png" height="80%" width="60%" class="cloud">
 	<img src="images/tree12.png" height="80%" width="40%" class="tree"></a>
 </body>
