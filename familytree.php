@@ -41,19 +41,19 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 	?>
 	<ul>
 		<li>
-			<img src="./A001/john/3.png" height=120 width=120">
-			<img src="./A001/ada/4.png" height=120 width=120"><br>
-			<a href="./A001/john/br.html">John</a><a style="visibility:hidden;">　</a>
-			<a href="./A001/ada/br.html">Ada</a>
+			<img src="./A001/john/face.jpg" height=120 width=120">
+			<img src="./A001/ada/face.jpg" height=120 width=120"><br>
+			<a href="./A001/john/br.html">王嘉言</a><a style="visibility:hidden;">　</a>
+			<a href="./A001/ada/br.html">李春嬌</a>
 			<ul>
 				<li>
 					<img src="./A001/1.jpg" height=120 width=120">
-					<img src="./A001/2.jpg" height=120 width=120">
 					<img src="./A001/james/7.jpg" height=120 width=120">
+					<img src="./A001/2.jpg" height=120 width=120">
 					<br>
-					<a href="./A001/james/br.html">James</a><a style="visibility:hidden;">　　　</a>
-					<a href="./A001/jenny/br.html">Jenny</a><a style="visibility:hidden;">　　　</a>
-					<a href="./A001/<? echo $_SESSION['ssusername'];?>/br.html"><? echo $_SESSION['ssusername'];?></a>				
+					<a href="./A001/james/br.html">王朱剛</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/<? echo $_SESSION['ssusername'];?>/br.html"><? echo $_SESSION['ssusername'];?></a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/jenny/br.html">王怡婷</a>
 					<ul>					
 						<li>
 							<img src="./A001/mary/1.jpg" height=120 width=120"><br>
@@ -72,17 +72,17 @@ body {background: url(images/fam_tree1) no-repeat center center fixed;
 			</ul>
 		</li>
 		<li>
-			<img src="./A001/6.png" height=120 width=120">
-			<img src="./A001/5.png" height=120 width=120"><br>
-			<a href="#">Standly</a><a style="visibility:hidden;">　</a>
-			<a href="#">ColaLin</a>
+			<img src="./A001/face6.jpg" height=120 width=120">
+			<img src="./A001/face5.jpg" height=120 width=120"><br>
+			<a href="#">李國正</a><a style="visibility:hidden;">　</a>
+			<a href="#">張玉春</a>
 			<ul>
 				<li>
 					<img src="./A001/52.jpg" height=120 width=120">
                     <img src="./A001/5.jpg" height=120 width=120">
 					<img src="./A001/6.jpg" height=120 width=120">
 					<br>					
-					<a href="./A001/jenny/br.html">Alice</a><a style="visibility:hidden;">　　　</a>
+					<a href="./A001/jenny/br.html">李顏如</a><a style="visibility:hidden;">　　　</a>
 					<a href="./A001/james/br.html">Oliver</a><a style="visibility:hidden;">　　　</a>
 					<a href="./A001/jenny/br.html">Peter</a>
 					<ul>					

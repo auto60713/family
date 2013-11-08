@@ -50,7 +50,7 @@ img.tree:hover {
 h1 {
  position: absolute;
  top:50%;
- left:10%;
+ left:15%;
  
  font-size:40px;
    color:#007AFA;

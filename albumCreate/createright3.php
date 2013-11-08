@@ -42,10 +42,15 @@ $loginname = ltrim($loginname);
 $query = "SELECT photoID, location FROM photo WHERE fm_ID='$loginname' and mk2='$mk2'";
 $result=mysql_query($query);
 
+$i =1;
 while ($row=mysql_fetch_array($result)) {
 	//echo "id=".$row['photoID'];
+	if ($i==12)
+	{echo "<br>";
+     $i = 0;}
 	echo '<input type="checkbox" name="chk[]" value="'.$row['location'].'"><label></label>';
     echo "<img src='../".$row['location']."' width='80' height='80'/> ";
+	 $i=$i+1;
 }
 
 ?>

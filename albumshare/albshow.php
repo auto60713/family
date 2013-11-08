@@ -16,8 +16,9 @@ function showimage() {
 
 <body>
   	<div id=menu>
+	<br>
 		<ul class=menu>
-		<li><a href="../home.html" target="top">首頁 </a></li>
+		<li><a href="../login.html" target="top">首頁 </a></li>
 	</div>
     <br>
 	<div id="book">

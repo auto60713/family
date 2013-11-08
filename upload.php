@@ -19,7 +19,7 @@ position: absolute;
    
    padding:10px; 
    
-  background:#CDFFCE;
+  background:#D4F8F8;
    border: 2px double #178918;
     box-shadow: 3px 4px 4px #7B7B7B;
 
@@ -46,7 +46,7 @@ position: absolute;
 	
 <form action="upload_finish.php" method="post" enctype="multipart/form-data">
 <h2>請上傳個人照片</h2>
-<h3>**** jpg圖片大小：600x500  可多張上傳****</h3>
+<h3>**** 限定jpg圖片  可多張上傳****</h3>
  <input type="file" name="imageURL[]" id="imageURL" multiple />
 <br><br><br><br>
 
