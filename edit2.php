@@ -28,7 +28,7 @@ var iNo=1; //圖片編號
 function init() 
 {
 	var img = new Image();
-	img.src="A001/william/20130517/1.jpg";
+	img.src="A001/william/20131109/1.jpg";
 
     m = document.getElementById("thisPic"); //取得畫布物件參考
     c = m.getContext("2d"); //建立2d繪圖物件
@@ -49,7 +49,7 @@ function Radio3_onclick()
 
   img1.src='images/film_bk2.jpg';
   //alert ("A001/william/20130517/"+ iNo + '.jpg');
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		//alert("OK");
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
@@ -70,7 +70,7 @@ function Radio4_onclick()
   var img2 = new Image();	
  
   img1.src='images/p.04.gif';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);  
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
   img1.onload = function()
@@ -90,7 +90,7 @@ function Radio5_onclick()
   var img2 = new Image();
 
   img1.src='images/p.03.gif';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200); 
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
   img1.onload = function()
@@ -110,7 +110,7 @@ function Radio6_onclick()
   var img2 = new Image();
  
   img1.src='images/p.05.jpg';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
   img1.onload = function()
@@ -130,7 +130,7 @@ function Radio7_onclick()
   var img2 = new Image();
 
   img1.src='images/p.06.jpg';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
    img1.onload = function()
@@ -150,7 +150,7 @@ function Radio8_onclick()
   var img2 = new Image();
 
   img1.src='images/p.07.jpg';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
    img1.onload = function()
@@ -170,7 +170,7 @@ function Radio9_onclick()
   var img2 = new Image();
       
   img1.src='images/p.08.jpg';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
    img1.onload = function()
@@ -190,7 +190,7 @@ function Radio10_onclick()
   var img2 = new Image();
 
   img1.src='images/p.11.jpg';
-  img2.src="A001/william/20130517/"+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
    img1.onload = function()
@@ -210,7 +210,7 @@ function Radio11_onclick()
   var img2 = new Image();
 
   img1.src='images/p.10.jpg';
-  img2.src="A001/william/20130517/"/*'<?  echo  $classID."/".$stuId."/";?>'*/+ 'pic'+ iNo + '.jpg';
+  img2.src="A001/william/20131109/"/*'<?  echo  $classID."/".$stuId."/";?>'*/+ 'pic'+ iNo + '.jpg';
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
 		// ctx.drawImage(img1,200,100,300,200,30,30,300,200);
    img1.onload = function()
@@ -224,7 +224,7 @@ function confirmDrawing()
 {
 	m = document.getElementById("thisPic"); 
 	var imgName = 'img' + iNo;
-	var canvasData = m.toDataURL("A001/william/20130517/");
+	var canvasData = m.toDataURL("A001/william/20131109/");
 	document.getElementById(imgName).src = canvasData;
 	
 	var ajax = new XMLHttpRequest();
@@ -345,26 +345,26 @@ function getImgSize(imgSrc)
 		
 			<td>
 				<div style=" overflow:auto; width: 200px; height: 500px;" border="1" cellpadding="4" cellspacing="0" align="center" valign="middle">
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/1.jpg',1)">
-						<img id="img1" alt="" src="A001/william/20130517/1.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/2.jpg',2)">
-						<img id="img2" alt="" src="A001/william/20130517/2.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/3.jpg',3)">
-						<img id="img3" alt="" src="A001/william/20130517/3.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/4.jpg',4)">
-						<img id="img4" alt="" src="A001/william/20130517/4.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/5.jpg',5)">
-						<img id="img5" alt="" src="A001/william/20130517/5.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/6.jpg',6)">
-						<img id="img6" alt="" src="A001/william/20130517/6.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/7.jpg',7)">
-						<img id="img7" alt="" src="A001/william/20130517/7.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/8.jpg',8)">
-						<img id="img8" alt="" src="A001/william/20130517/8.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/9.jpg',9)">
-						<img id="img9" alt="" src="A001/william/20130517/9.jpg" width="120" height="120"></a></ol>
-					<ol><a href="#_self" onclick="ShowImage('A001/william/20130517/10.jpg',10)">
-						<img id="img10" alt="" src="A001/william/20130517/10.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/1.jpg',1)">
+						<img id="img1" alt="" src="A001/william/20131109/1.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/2.jpg',2)">
+						<img id="img2" alt="" src="A001/william/20131109/2.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/3.jpg',3)">
+						<img id="img3" alt="" src="A001/william/20131109/3.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/4.jpg',4)">
+						<img id="img4" alt="" src="A001/william/20131109/4.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/5.jpg',5)">
+						<img id="img5" alt="" src="A001/william/20131109/5.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/6.jpg',6)">
+						<img id="img6" alt="" src="A001/william/20131109/6.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/7.jpg',7)">
+						<img id="img7" alt="" src="A001/william/20131109/7.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/8.jpg',8)">
+						<img id="img8" alt="" src="A001/william/20131109/8.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/9.jpg',9)">
+						<img id="img9" alt="" src="A001/william/20131109/9.jpg" width="120" height="120"></a></ol>
+					<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/10.jpg',10)">
+						<img id="img10" alt="" src="A001/william/20131109/10.jpg" width="120" height="120"></a></ol>
 				</div>
 			</td>
 			</tr>

@@ -20,7 +20,7 @@ opacity: 0.6;
 }
 
 div.creat {
- height:40%;
+ height:70%;
    width:50%;
    position: absolute;
    top:20%;
@@ -55,7 +55,13 @@ h3{ text-shadow: 1px 2px 1px #7B7B7B;}
 	<form name="form" method="post" action="tree_finish.php">
     <h3>樹的名稱：<input type="text" name="title"/><h3><br>
     <h3>幾個子女：<input type="text" name="many"/> <h3><br>
-    <input type="submit" name="button" value="確定" style="height:30px; width:50px;"/>
+    <input type="submit" name="button" value="建立" style="height:30px; width:50px;"/>
+	</form>
+	<h1>或是加入已成立的家庭樹</h1><br>
+	<form name="form" method="post" action="tree_finish2.php">
+    <h3>樹的代碼ˋ：<input type="text" name="treeid"/><h3><br>
+    <h3>稱位號碼：<input type="text" name="who"/> <h3><br>
+    <input type="submit" name="button" value="加入" style="height:30px; width:50px;"/>
     </form>
 	</div>
 	

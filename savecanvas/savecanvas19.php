@@ -14,7 +14,7 @@ $query = "SELECT loginname FROM member WHERE active=1";
 $result=mysql_query($query);
 $row = mysql_fetch_array($result,  MYSQL_ASSOC);
 echo $row['loginname']."<br>";
-$usrDir = "../A001/william/20130517/".$row['loginname']."/";
+$usrDir = "../A001/william/20131109/".$row['loginname']."/";
 mysql_free_result($result);
 
 echo $usrDir."<br>";

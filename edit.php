@@ -46,7 +46,7 @@
 <script>
 function init() {
 	var img = new Image();
-	img.src="A001/william/20130517/1.jpg";
+	//img.src="A001/william/20130517/1.jpg";
 	
 
     m = document.getElementById("canvas"); //取得畫布物件參考
@@ -59,7 +59,7 @@ function init() {
 function confirmDrawing() {
 	m = document.getElementById("canvas"); 
 	var imgName = 'img' + iNo;
-	var canvasData = m.toDataURL("A001/william/20130517/");
+	var canvasData = m.toDataURL("A001/william/20131108/");
 	document.getElementById(imgName).src = canvasData;
 	
 var ajax = new XMLHttpRequest();
@@ -195,12 +195,7 @@ alert ('The image size is '+width+'*'+height);
 <br>
 <br>
 
-<? 
-
-
-?>
-
-	<table border="2" cellpadding="4" >
+<table border="2" cellpadding="4" >
 		<tr>
 		<td>
 		<canvas id="canvas" width="600" height="500"></canvas>
@@ -209,37 +204,17 @@ alert ('The image size is '+width+'*'+height);
 		
 		<td >
 			<div style=" overflow:auto; width: 200px; height: 500px; " border="1" cellpadding="4" cellspacing="0" align="center" valign="middle">
-		<?
-		
-		        //取得傳遞過來的資料
-                $host="localhost"; // Host name 
-                $username="root"; // Mysql username 
-                $password="123456"; // Mysql password 
-                $db_name="myhome"; // Database name 
-
-                mysql_connect("$host", "$username", "$password")or die("cannot connect"); 
-                mysql_select_db("$db_name")or die("cannot select DB");
-
-                mysql_query("SET NAMES 'utf8'");
-
-                $sql = "SELECT location FROM photo where fm_ID='william' ORDER BY photoID DESC;";
-                $result = mysql_query($sql);
-                $row = mysql_fetch_row($result);
-		
-		
-		
-				$i=0;
-				while($row = @mysql_fetch_row($result))
-               {
-			   $input = "ShowImage('".$row[0]."',1)";
-			   echo '<ol><a href="#_self" onclick="'.$input.'"><img id="img1" alt="" src="'.$row[0].'" width="120" height="120"></a></ol>';
-                                
-	        	$i=$i+1;
-				
-				if ($i==6) {break;}
-		       }	
-			?>
-				</div> 
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/1.jpg',1)"><img id="img1" alt="" src="A001/william/20131109/1.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/2.jpg',2)"><img id="img2" alt="" src="A001/william/20131109/2.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/3.jpg',3)"><img id="img3" alt="" src="A001/william/20131109/3.jpg" width="120" height="120"></a></ol>
+                <ol><a href="#_self" onclick="ShowImage('A001/william/20131109/4.jpg',4)"><img id="img4" alt="" src="A001/william/20131109/4.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/5.jpg',5)"><img id="img5" alt="" src="A001/william/20131109/5.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/6.jpg',6)"><img id="img6" alt="" src="A001/william/20131109/6.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/7.jpg',7)"><img id="img7" alt="" src="A001/william/20131109/7.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/8.jpg',8)"><img id="img8" alt="" src="A001/william/20131109/8.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/9.jpg',9)"><img id="img9" alt="" src="A001/william/20131109/9.jpg" width="120" height="120"></a></ol>
+				<ol><a href="#_self" onclick="ShowImage('A001/william/20131109/10.jpg',10)"><img id="img10" alt="" src="A001/william/20131109/10.jpg" width="120" height="120"></a></ol>
+             </div> 
 		</td>
 		</tr>
 	</table>

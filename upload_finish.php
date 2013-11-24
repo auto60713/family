@@ -8,7 +8,7 @@
 <?
 
  if (isset($_GET['loginname']))
-    { $loginname=$_GET['loginname'];    }	
+    { $loginname=$_GET['loginname'];    }        
  else
   {  }
   
@@ -36,12 +36,12 @@ $thistime = date('Ymd', time());
 
 if(is_dir($classID)) { } 
 else { mkdir($classID);} 
-	
+        
 if(is_dir($classID.'/'.$fmID)) { }
-else { mkdir($classID.'/'.$fmID);} 		
+else { mkdir($classID.'/'.$fmID);}                 
 
 if(is_dir($classID.'/'.$fmID.'/'.$thistime)) { }
-else { mkdir($classID.'/'.$fmID.'/'.$thistime);} 	
+else { mkdir($classID.'/'.$fmID.'/'.$thistime);}         
 
 
 
@@ -55,8 +55,9 @@ if (is_uploaded_file($_FILES["imageURL"]["tmp_name"][0])) {
 if(is_array($fdata['name'])){
 for($i=0;$i<count($fdata['name']);++$i){
 $uid = uniqid();
-if ( copy($_FILES["imageURL"]["tmp_name"][$i],$classID.'/'.$fmID.'/'.$thistime.'/'.$i.'.jpg')) {
-$photoPath = $classID.'/'.$fmID.'/'.$thistime.'/'.$i.'.jpg';
+$i2=$i+1; //限制檔名1開始
+if ( copy($_FILES["imageURL"]["tmp_name"][$i],$classID.'/'.$fmID.'/'.$thistime.'/'.$i2.'.jpg')) {
+$photoPath = $classID.'/'.$fmID.'/'.$thistime.'/'.$i2.'.jpg';
 $query = "INSERT INTO photo (fm_ID,photo_date,location) VALUES ('$fmID', $photo_date, '$photoPath')" or die("insert class member error");
 $result=mysql_query($query);
 // echo "檔案上傳成功<br>";
@@ -67,7 +68,7 @@ echo "檔案上傳失敗, imageURL<br>";
 }
 } else {
 $files[]=$fdata;
-if ( copy($_FILES["imageURL"]["tmp_name"],$classID.'/'.$fmID.'/'.$thistime.'/'.$i.'.jpg')) {
+if ( copy($_FILES["imageURL"]["tmp_name"],$classID.'/'.$fmID.'/'.$thistime.'/'.$i2.'.jpg')) {
 unlink($_FILES["imageURL"]["tmp_name"]);
 } else {
 echo "檔案上傳失敗, imageURL<br>";
